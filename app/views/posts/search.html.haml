@@ -1,0 +1,7 @@
+%h1 Search results for "#{params[:text]}"
+
+%ul
+  - @posts.each do |post|
+    %li
+      =link_to post.title, post
+      = raw post.highlight.values.flatten.join('...')

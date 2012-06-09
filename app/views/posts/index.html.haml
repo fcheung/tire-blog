@@ -1,0 +1,20 @@
+%h1
+  Listing Posts
+  
+%table
+  %tr
+    %th
+      title
+    %th
+      posted at
+    %th
+    %th
+  - @posts.each do |post|
+    %tr
+      %td= post.title
+      %td= post.created_at.strftime('%H:%M %d/%m/%Y')
+      %td= link_to 'Show', post
+      %td= link_to 'Delete', post, :method => :delete
+    
+    
+= link_to 'New post', new_post_path

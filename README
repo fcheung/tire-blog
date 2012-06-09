@@ -1,0 +1,4 @@
+Elasticsearch example app
+=========================
+
+A very simple blog app that uses elasticsearch as its datastore.
